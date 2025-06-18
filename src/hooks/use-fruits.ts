@@ -4,7 +4,14 @@ import { API_BASE_URL, API_HEADERS } from "@/constants";
 
 async function fetchFruits(): Promise<Fruit[]> {
   const response = await fetch(`${API_BASE_URL}/fruits`, {
-    headers: API_HEADERS,
+    headers: {
+      ...API_HEADERS,
+      "Access-Control-Allow-Origin": "https://prime7.github.io",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, x-api-key"
+    },
+    mode: "cors",
+    credentials: "include"
   });
 
   if (!response.ok) {
