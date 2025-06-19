@@ -4,7 +4,7 @@ Take home assignment for finofo.
 
 ## Demo
 
-You can view the live demo at [https://finofo.vercel.app](https://finofo.vercel.app)
+You can view the live demo at [https://tarek-fintech.vercel.app/](https://tarek-fintech.vercel.app/)
 
 
 ## How to run locally
