@@ -1,11 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import type { Fruit } from "../types";
-import { API_BASE_URL, API_HEADERS } from "@/constants";
 
 async function fetchFruits(): Promise<Fruit[]> {
-  const response = await fetch(`${API_BASE_URL}/fruits`, {
-    headers: API_HEADERS,
-  });
+  const response = await fetch("/api/fruits");
 
   if (!response.ok) {
     throw new Error(
